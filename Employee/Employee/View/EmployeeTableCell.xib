@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmployeeTableCell" id="KGk-i7-Jjw" customClass="EmployeeTableCell" customModule="Employee" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9qE-x5-uQk">
+                        <rect key="frame" x="271" y="6.6666666666666679" width="51" height="31.000000000000004"/>
+                        <connections>
+                            <action selector="switchChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="dxn-ij-lcv"/>
+                        </connections>
+                    </switch>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBi-kd-Fd9">
+                        <rect key="frame" x="180.66666666666666" y="4.6666666666666679" width="85.333333333333343" height="35"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Remove"/>
+                        <connections>
+                            <action selector="removeTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FYj-0x-rLZ"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7H-fN-aEY">
+                        <rect key="frame" x="10" y="10" width="42" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="h7H-fN-aEY" secondAttribute="bottom" constant="10" id="7Pk-4l-1Ip"/>
+                    <constraint firstItem="h7H-fN-aEY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="V6h-hK-ifA"/>
+                    <constraint firstItem="9qE-x5-uQk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YJp-7Y-LXp"/>
+                    <constraint firstItem="HBi-kd-Fd9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="h7H-fN-aEY" secondAttribute="trailing" constant="5" id="gLy-La-f2i"/>
+                    <constraint firstItem="HBi-kd-Fd9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="h7H-fN-aEY" secondAttribute="trailing" constant="5" id="jUM-FJ-6XW"/>
+                    <constraint firstAttribute="trailing" secondItem="9qE-x5-uQk" secondAttribute="trailing" id="v61-7U-EfP"/>
+                    <constraint firstItem="h7H-fN-aEY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="vJr-db-C8x"/>
+                    <constraint firstItem="HBi-kd-Fd9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vW2-gc-ILG"/>
+                    <constraint firstItem="9qE-x5-uQk" firstAttribute="leading" secondItem="HBi-kd-Fd9" secondAttribute="trailing" constant="5" id="xMb-lb-hEs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="employeeSwitch" destination="9qE-x5-uQk" id="mGs-uJ-HiS"/>
+                <outlet property="removeButton" destination="HBi-kd-Fd9" id="0eu-ag-udC"/>
+                <outlet property="titleLabel" destination="h7H-fN-aEY" id="1j1-7s-zfg"/>
+            </connections>
+            <point key="canvasLocation" x="370.9923664122137" y="12.67605633802817"/>
+        </tableViewCell>
+    </objects>
+</document>
